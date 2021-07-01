@@ -13,6 +13,7 @@ target 'themovieapp' do
   )
 
   target 'themovieappTests' do
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
     inherit! :complete
     # Pods for testing
   end
