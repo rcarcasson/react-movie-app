@@ -25,7 +25,7 @@ export default function DrawerContent(props) {
                 <TouchableRipple>
                     <View style={styles.preferences}>
                         <Text>Tema oscuro</Text>
-                        <Switch value={true}></Switch>
+                        <Switch value={theme === 'dark' ? true : false} onValueChange={toogleTheme}></Switch>
                     </View>
                 </TouchableRipple>
             </Drawer.Section>
