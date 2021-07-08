@@ -34,7 +34,7 @@ export default function StackNavigation(props) {
     return (
         <Stack.Navigator>
             <Stack.Screen name='home' component={Home} options={{title: 'TheMovieApp', headerLeft: () => buttonLeft('home'), headerRight: () => buttonRight()}}></Stack.Screen>
-            <Stack.Screen name='movie' component={Movie} options={{title: 'Movie', headerLeft: () => buttonLeft('movie'), headerRight: () => buttonRight()}}></Stack.Screen>
+            <Stack.Screen name='movie' component={Movie} options={{headerTransparent:true, title: 'Movie', headerLeft: () => buttonLeft('movie'), headerRight: () => buttonRight()}}></Stack.Screen>
             <Stack.Screen name='news' component={News} options={{title: 'Nuevas películas', headerLeft: () => buttonLeft('news'), headerRight: () => buttonRight()}}></Stack.Screen>
             <Stack.Screen name='popular' component={Popular} options={{title: 'Películas populares', headerLeft: () => buttonLeft('popular'), headerRight: () => buttonRight()}}></Stack.Screen>
             <Stack.Screen name='search' component={Search} options={{title: 'Search', headerLeft: () => buttonLeft('search')}}></Stack.Screen>

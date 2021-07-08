@@ -25,3 +25,35 @@ export function getGenreMovieApi(idGenres) {
         return arrayGenres;
     });
 }
+
+export function getAllGenresApi() {
+    const url = `${API_HOST}/genre/movie/list?api_key=${API_KEY}&language=${LANG}`;
+
+    return fetch(url).then( (response) => {
+        return response.json();
+    }).then( (result) => {
+        return result;
+    });
+}
+
+export function getGenreMoviesApi(idGenres) {
+    const url = `${API_HOST}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${idGenres}`;
+
+    return fetch(url).then( (response) => {
+        return response.json();
+    }).then( (result) => {
+        return result;
+    });
+
+}
+
+export function getMovieByIdApi(idMovie) {
+    const url = `${API_HOST}/movie/${idMovie}?api_key=${API_KEY}&language=${LANG}`;
+
+    return fetch(url).then( (response) => {
+        return response.json();
+    }).then( (result) => {
+        return result;
+    });
+
+}
